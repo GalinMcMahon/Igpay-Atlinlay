@@ -3,7 +3,6 @@
 //
 // var pigLatin = [];
 
-
 // user logic
 $(document).ready(function() {
   $("form#pig-latin").submit(function(event) {
@@ -11,17 +10,16 @@ $(document).ready(function() {
     // set variable to collect user input and result
     var sentence = $("input#sentence").val();
 
-    $("#result").text(sentence);
-
-
-
     // vowels.forEach(function(vowel) {
     //   pigLatin.push("ay");
     // });
       // Create a new array out of the input sentence.
-    // var newSentence = sentence.split(" ");
-    // $(newSentence).forEach(function(newSentence)){
-    //    (index = 0; index <= vowel.length; index ++) {
+    var newSentence = sentence.split(" ");
+        // Calling back newSentence and cycling through each element to append 'ay'
+    newSentence.forEach(function(newSentence) {
+      $("#result").append(newSentence+"ay ");
+    });
+    //    (index = 0; index < = vowel.length; index ++) {
     //
     //   }
     // });
